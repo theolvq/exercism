@@ -10,9 +10,9 @@ const values = {
 export const score = word => {
   let total = 0;
   for (const [key, value] of Object.entries(values)) {
-    [...word.toUpperCase()].forEach(el =>
+    [...word.toUpperCase()].forEach(l =>
       value.forEach(v => {
-        el === v ? (total += Number(key)) : total;
+        l === v ? (total += Number(key)) : total;
       })
     );
   }
