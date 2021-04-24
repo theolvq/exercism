@@ -19,21 +19,11 @@ export const decode = str => {
           let n = el.match(/^\d+/g);
           let l = el.match(/[^\d]/g);
           let result = '';
-          if (!n) return el;
-          else {
-            for (let i = 1; i <= n; i++) {
-              result += l;
-            }
-            return (el = result);
+          for (let i = 0; i < n; i++) {
+            result += l;
           }
+          return !n ? el : (el = result);
         })
         .join('')
     : str;
 };
-
-// Slaymance's solution, really awesome
-// export const encode = string =>
-//   string.replace(/(.)\1+/g, ({ length }, char) => length + char);
-
-// export const decode = string =>
-//   string.replace(/(\d+)(.)/g, (_, length, char) => char.repeat(length));
