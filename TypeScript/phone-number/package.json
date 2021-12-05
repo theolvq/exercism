@@ -1,5 +1,5 @@
 {
-  "name": "@exercism/typescript-acronym",
+  "name": "@exercism/typescript-phone-number",
   "version": "1.0.0",
   "description": "Exercism exercises in Typescript.",
   "private": true,
